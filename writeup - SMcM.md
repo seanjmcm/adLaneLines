@@ -108,16 +108,18 @@ dst = np.float32(
     [960.,720.]])
 ```
 
-I did not base the source and destination points on the actual image size as frther work would be required to see if that method worked with different image sizes.
+I did not base the source and destination points on the actual image size as further work would be required to see if that method worked with different image sizes.
 
 The matching source and destination points were thus:
 
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
-| 200.,720.     | 320.,720.      | 
-| 453.,547.     | 320., 590.5    |
-| 835.,547.     | 960.,590.5     |
-| 1100.,720.    | 960.,720.      |
+| 200.,720.     | 320.,720.     | 
+| 453.,547.     | 320., 590.5   |
+| 835.,547.     | 960.,590.5    |
+| 1100.,720.    | 960.,720.     |
+
+The above points are based on the routine suggest by driveWell (https://discussions.udacity.com/t/perspective-transform/235255/8)
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.  The is shown in the below image which was converted to RGB in order to better show the lines.
 
