@@ -26,7 +26,7 @@ The goals / steps of this project are the following:
 [image4]: ./Report_Images/warped_lines.png "Warp Example"
 [image5]: ./Report_Images/lanefit.png "Fit Visual"
 [image6]: ./Report_Images/Mapped2Road.png "Output"
-[video1]: ./Report_Video/video_out.mp4 "Video"
+[video1]: ./project_video_SMcM.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -165,7 +165,7 @@ I implemented this step in code section 6 in my code in `adLane.ipynb` in the fu
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./Report_Video/video_out.mp4)
+Here's a [link to my video result](./project_video_SMcM.mp4)
 
 ---
 
@@ -173,6 +173,6 @@ Here's a [link to my video result](./Report_Video/video_out.mp4)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-The video kept crashing at approximately 96% because I was using array number 719 to detect the midpoint of the car on the road.  In general this works quite well but if there is significantly less detail on the road it will cause issues.  Instead it would be better to use an average of polynomial fitted curve points at approximately 95 - 100 pixels from the car.  This would be a more consistent approach.
+The video kept crashing at approximately 96% in the challenge video `challenge_video.mpg4` because I was using array number 719 to detect the midpoint of the car on the road.  In general this works quite well but if there is significantly less detail on the road it will cause issues.  Instead it would be better to use an average of polynomial fitted curve points at approximately 95 - 100 pixels from the car.  This would be a more consistent approach.
 
 The road shading is presenting problems to the algorithm.  A running average or smoothing would assist with rejecting false shading lines. 
